@@ -444,90 +444,89 @@
 	</joint>
 
 	<!-- Transmission Plugin -->
-
 	<transmission name="trans_body1">
 		<!--<type>transmission_interface/SimpleTransmission</type>-->
         <type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_body1">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_body2">
 		<!--<type>transmission_interface/SimpleTransmission</type>-->
         <type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_body2">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_body3">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate3">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_body3">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_body4">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_body4">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_wheel1">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_wheel1">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_wheel2">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_wheel2">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_wheel3">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_3">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_wheel3">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
-
+    
 	<transmission name="trans_wheel4">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            
         </joint>
 		<actuator name="motor_wheel4">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
