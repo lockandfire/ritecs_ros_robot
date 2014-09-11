@@ -7,7 +7,7 @@
 
 	<!-- gazebo <-> ros control plugin -->	
 	<gazebo>
-		<plugin filename="libgazebo_ros_control.dylib" name="gazebo_ros_control">
+		<plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
 			<robotNamespace>/ros_robot</robotNamespace>
             <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
 		</plugin>
@@ -449,7 +449,6 @@
 		<!--<type>transmission_interface/SimpleTransmission</type>-->
         <type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_body1">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -461,7 +460,6 @@
 		<!--<type>transmission_interface/SimpleTransmission</type>-->
         <type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_body2">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -472,7 +470,6 @@
 	<transmission name="trans_body3">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate3">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_body3">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -483,7 +480,6 @@
 	<transmission name="trans_body4">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="body_rotate4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_body4">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -494,7 +490,6 @@
 	<transmission name="trans_wheel1">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_wheel1">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -505,7 +500,6 @@
 	<transmission name="trans_wheel2">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_wheel2">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -516,7 +510,6 @@
 	<transmission name="trans_wheel3">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_3">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_wheel3">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -527,7 +520,6 @@
 	<transmission name="trans_wheel4">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="wheel_4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
         </joint>
 		<actuator name="motor_wheel4">
 			<hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -683,7 +675,7 @@
                     <stddev>0.007</stddev>
                 </noise>
             </camera>
-            <plugin name="camera_controller" filename="libgazebo_ros_camera.dylib">
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
                 <alwaysOn>true</alwaysOn>
                 <updateRate>0.0</updateRate>
                 <cameraName>ros_robot/camera1</cameraName>
@@ -733,7 +725,7 @@
                     <stddev>0.01</stddev>
                 </noise>
             </ray>
-            <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.dylib">
+            <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
                 <topicName>/ros_robot/laser/scan</topicName>
                 <frameName>camera_base</frameName>
             </plugin>
