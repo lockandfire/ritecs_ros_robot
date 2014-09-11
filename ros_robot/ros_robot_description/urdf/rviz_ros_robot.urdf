@@ -7,7 +7,7 @@
 
 	<!-- gazebo <-> ros control plugin -->	
 	<gazebo>
-		<plugin filename="libgazebo_ros_control.dylib" name="gazebo_ros_control">
+		<plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
 			<robotNamespace>/ros_robot</robotNamespace>
             <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
 		</plugin>
@@ -733,7 +733,7 @@
                     <stddev>0.01</stddev>
                 </noise>
             </ray>
-            <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.dylib">
+            <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
                 <topicName>/ros_robot/laser/scan</topicName>
                 <frameName>camera_base</frameName>
             </plugin>
