@@ -1,0 +1,49 @@
+ros_robot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  joint_body1_controller:
+    type: effort_controllers/JointPositionController
+    joint: body_rotate1
+    pid: {p: 0.5, i: 0.01, d: 0.5}
+
+  joint_body2_controller:
+    type: effort_controllers/JointPositionController
+    joint: body_rotate2
+    pid: {p: 0.5, i: 0.01, d: 0.5}
+
+  joint_body3_controller:
+    type: effort_controllers/JointPositionController
+    joint: body_rotate3
+    pid: {p: 0.5, i: 0.01, d: 0.5}
+
+  joint_body4_controller:
+    type: effort_controllers/JointPositionController
+    joint: body_rotate4
+    pid: {p: 0.5, i: 0.01, d: 0.5}
+
+  # Position Controllers / wheels ----------------------------
+
+  joint_wheel1_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_1
+    pid: {p: 10.0, i: 0.01, d: 0}
+
+  joint_wheel2_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_2
+    pid: {p: 10.0, i: 0.01, d: 0}
+
+  joint_wheel3_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_3
+    pid: {p: 10.0, i: 0.01, d: 0}
+
+  joint_wheel4_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_4
+    pid: {p: 10.0, i: 0.01, d: 0}
+

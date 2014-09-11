@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="use_sim_time" value="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find ros_robot_gazebo)/worlds/ros_robot.world"/>
+  </include>
+
+<include file="$(find ros_robot_control)/launch/ros_robot_control.launch"/>
+
+
+  <param name="robot_description" textfile="$(find ros_robot_description)/urdf/ros_robot.urdf"/>
+
+<node name="osx_joystick" pkg="osx_joystick" type="osx_joystick" args="--num 0 --hz 120"/>
+
+<node name="ros_robot_ctrlpub" pkg="ros_robot_ctrlpub" type="ros_robot_ctrlpub"/>
+
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model ros_robot" />
+
+</launch>

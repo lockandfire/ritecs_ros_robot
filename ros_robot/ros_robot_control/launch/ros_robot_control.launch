@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find ros_robot_control)/config/ros_robot_control.yaml" command="load"/>
+  <param name="robot_description" textfile="$(find ros_robot_description)/urdf/ros_robot.urdf" />
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/ros_robot" args="joint_state_controller joint_body1_controller	joint_body2_controller joint_body3_controller joint_body4_controller joint_wheel1_controller joint_wheel2_controller joint_wheel3_controller joint_wheel4_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/ros_robot/joint_states" />
+  </node>
+
+</launch>

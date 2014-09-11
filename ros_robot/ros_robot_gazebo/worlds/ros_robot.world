@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="indoor_mesh">
+        <pose>-0.75 -1 0  0 0 1.57</pose>
+        <static>true</static>
+        <link name="body">
+            <collision name="collision">
+                <geometry>
+                    <mesh><uri>file:///Users/Altrouge/catkin_ws/src/ros_robot/ros_robot_gazebo/worlds/InDoor.dae</uri></mesh>
+                </geometry>                
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <mesh><uri>file:///Users/Altrouge/catkin_ws/src/ros_robot/ros_robot_gazebo/worlds/InDoor.dae</uri></mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+
+
+  </world>
+</sdf>
