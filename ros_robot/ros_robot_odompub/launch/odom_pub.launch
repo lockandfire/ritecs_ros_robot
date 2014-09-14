@@ -1,0 +1,6 @@
+<launch>
+<node name="ros_robot_odompub" pkg="ros_robot_odompub" type="ros_robot_odompub_node"/> 
+
+<node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" args="scan:=/ros_robot/laser/scan _base_frame:=base _odom_frame:=odom"/>
+
+</launch>
